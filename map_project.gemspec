@@ -8,10 +8,10 @@ Gem::Specification.new do |s|
   s.name        = "map_project"
   s.version     = MapProject::VERSION
   s.authors     = ["Lu Zou"]
-  s.email       = ["Lu.Zou@move.com"]
-  s.homepage    = "TODO"
-  s.summary     = "TODO: Summary of MapProject."
-  s.description = "TODO: Description of MapProject."
+  s.email       = ["luxizou.web@gmail.com"]
+  s.homepage    = "https://github.com/luzou0526/map_project"
+  s.summary     = "Tools converting geo latlng to viewport position."
+  s.description = "Gem provides a way to calculate zoom level using boudary, and get the html viewport coords for map locations"
   s.license     = "MIT"
 
   s.files = Dir["{app,config,db,lib}/**/*", "MIT-LICENSE", "Rakefile", "README.rdoc"]

@@ -26,6 +26,3 @@ module MapProject
     (Math.log(map_px / world_px / fraction) / LN2).floor
   end
 end
-
-include MapProject
-puts get_bounds_zoom_level({sw:[10.2,10.2], ne:[12.1,12.1]}, 640)
