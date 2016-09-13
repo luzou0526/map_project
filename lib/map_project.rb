@@ -5,14 +5,14 @@ module MapProject
   WORLD_PX = 256.freeze
   ZOOM_MAX = 21.freeze
   # Get the zoom level for a viewport given latlng boundary
-  def get_bounds_zoom_level(bounds, viewport_size)
+  def get_bounds_zoom_level(bounds, viewport_w, viewport_h)
     ne = bounds[:ne]
     sw = bounds[:sw]
     lat_fraction = (lat_rad(ne[0]) - lat_rad(sw[0])) / Math::PI
     lng_diff = ne[1] - sw[1]
     lng_fraction = ((lng_diff < 0) ? (lng_diff + 360) : lng_diff) / 360
-    lat_zoom = zoom(viewport_size, WORLD_PX, lat_fraction)
-    lng_zoom = zoom(viewport_size, WORLD_PX, lng_fraction)
+    lat_zoom = zoom(viewport_h, WORLD_PX, lat_fraction)
+    lng_zoom = zoom(viewport_w, WORLD_PX, lng_fraction)
     [[lat_zoom, lng_zoom].min, ZOOM_MAX].min
   end
 
