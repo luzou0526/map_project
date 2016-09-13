@@ -1,14 +1,3 @@
-# If given zoom level, and center latlng, you can get:
-# => pixel_per_lat
-#    pixel_per_long
-
-# If center latlng, latlng bound, you can get:
-# => offset_on_viewport
-
-# If given zoom level, center latlng, viewport size, you can get:
-# => latlng bound
-#    offset_on_viewport
-
 module MapProject
   TILE_SIZE = 256.freeze
   FACTOR_TO_RAD = Rational(Math::PI, 180).freeze
@@ -67,12 +56,11 @@ module MapProject
         (pixel_bounds_based_on_center[:ne][0] - input_pixel_coords[0]).abs,
         (pixel_bounds_based_on_center[:sw][1] - input_pixel_coords[1]).abs
       ]
-      # lat_offset = ((p_lat - geo_bounds_based_on_center[:ne][0]) * pixel_per_lat).to_i.abs
-      # long_offset = ((p_long - geo_bounds_based_on_center[:sw][1]) * pixel_per_long).to_i.abs
-      # [lat_offset, long_offset]
     end
 
     # Return: pixel bounds of the viewport
+    # PS: Top Left is 0,0
+    #     in pixel coords, lat long increase => farther from 0,0
     def pixel_bounds_based_on_center
       viewport_radius_w = @viewport_w / 2
       viewport_radius_h = @viewport_h / 2
