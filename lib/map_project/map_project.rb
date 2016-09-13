@@ -51,10 +51,10 @@ module MapProject
     # Usage example: css sprite
     def offset_on_viewport(p_lat, p_long)
       input_pixel_coords = world_to_pixel(lat_lng_to_world(p_lat, p_long))
-      puts input_pixel_coords
+
       [
-        (pixel_bounds_based_on_center[:ne][0] - input_pixel_coords[0]).abs,
-        (pixel_bounds_based_on_center[:sw][1] - input_pixel_coords[1]).abs
+        (pixel_bounds_based_on_center[:sw][1] - input_pixel_coords[1]).abs,
+        (pixel_bounds_based_on_center[:ne][0] - input_pixel_coords[0]).abs
       ]
     end
 
