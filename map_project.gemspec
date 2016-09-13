@@ -13,11 +13,9 @@ Gem::Specification.new do |s|
   s.summary     = "Tools converting geo latlng to viewport position."
   s.description = "Gem provides a way to calculate zoom level using boudary, and get the html viewport coords for map locations"
   s.license     = "MIT"
-
-  s.files = Dir["{app,config,db,lib}/**/*", "MIT-LICENSE", "Rakefile", "README.rdoc"]
-  s.test_files = Dir["test/**/*"]
-
+  s.files       = `git ls-files`.split("\n")
+  s.test_files  = `git ls-files -- {test,spec,features}/*`.split("\n")
+  s.require_paths = ['lib']
   s.add_dependency "rails", "~> 4.2.6"
-
   s.add_development_dependency "sqlite3"
 end
