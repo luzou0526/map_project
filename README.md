@@ -6,10 +6,15 @@ In Gemfile:
 ```ruby
 gem 'map_project'
 ```
-Then bundle:
+and bundle:
 ```ruby
 $ bundle install
 ```
+Then, include: 
+```ruby
+include MapProject
+```
+In any files you need.
 
 # Usage:
 ***
