@@ -11,7 +11,7 @@ Gem::Specification.new do |s|
   s.email       = ["luxizou.web@gmail.com"]
   s.homepage    = "https://github.com/luzou0526/map_project"
   s.summary     = "Tools converting geo latlng map projection."
-  s.description = "Gem provides a way to calculate zoom level using boudary, and project map to viewports(html elements)\n0.0.2 Update: Fix rounding issue when viewport smaller than 256px"
+  s.description = "Gem provides a way to calculate zoom level using boudary, and project map to viewports(html elements)\n0.0.3 Update: Fix rounding issue when viewport smaller than 256px"
   s.license     = "MIT"
   s.files       = `git ls-files`.split("\n")
   s.test_files  = `git ls-files -- {test,spec,features}/*`.split("\n")
