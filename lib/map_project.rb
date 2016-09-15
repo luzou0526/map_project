@@ -17,12 +17,12 @@ module MapProject
   end
 
   def lat_rad(lat)
-    sin = Math.sin(lat * Math::PI / 180)
+    sin = Math.sin(Rational(lat * Math::PI, 180))
     rad_x2 = Math.log((1 + sin) / (1 - sin)) / 2
     [[rad_x2, Math::PI].min, -Math::PI].max / 2
   end
 
   def zoom(map_px, world_px, fraction)
-    (Math.log(map_px / world_px / fraction) / LN2).floor
+    (Math.log(Rational(map_px, world_px) / fraction) / LN2).floor
   end
 end
