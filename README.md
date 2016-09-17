@@ -1,6 +1,13 @@
 # map_project
 This gem provides a set of tools which can help users to map geo lat-lng to viewport coords. For example, you can use this gem to convert lat-long points to html `<div>` coords.
 
+This gem applies to many user cases, for example, when:
+- You have a set of lat,long positions, and want to drop them as pins on map
+- You have a map, and want to sprite it in to multiple viewports
+- You need the actual on-map boundary
+- You need mapping between lat,long and google world, google pixel coords.
+- ...
+
 # Install
 In Gemfile:
 ```ruby
